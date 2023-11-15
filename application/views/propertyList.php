@@ -125,9 +125,9 @@
                 dropdown.append('<option value="">Choose...</option>');
                 dropdown2.append('<option value="">Choose...</option>');
                 $.each(response, function(index, value) {
-                    dt.draw();
                     dropdown.append('<option value="' + value.borough + '">' + value.borough + '</option>');
                 }); 
+                dt.draw();
             },
             error: function(xhr, status, error) {
                 console.log("AJAX error: " + error);
@@ -160,10 +160,11 @@
                 dropdown.empty();
                 dropdown.append('<option value="">Choose...</option>');
                 $.each(response, function(index, value) {
-                    dt.draw();
                     dropdown.append('<option value="' + value.incident_zip + '">' + value.incident_zip + '</option>');
               
                 });
+                dt.draw();
+
             },
             error: function(xhr, status, error) {
                 console.log("AJAX error: " + error);
